@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Idosos.MainPage"
+             BackgroundColor="#F4F5F3"
+             Shell.NavBarIsVisible="False">
+
+    <ContentPage.Resources>
+        <Color x:Key="Verde">#1F5A45</Color>
+        <Color x:Key="VerdeClaro">#E8EFEA</Color>
+        <Color x:Key="Texto">#1B2B24</Color>
+        <Color x:Key="TextoSuave">#5F6B65</Color>
+        <Color x:Key="Borda">#E1E5E1</Color>
+
+        <Style x:Key="CartaoStyle" TargetType="Border">
+            <Setter Property="BackgroundColor" Value="White" />
+            <Setter Property="Stroke" Value="{StaticResource Borda}" />
+            <Setter Property="StrokeThickness" Value="1" />
+            <Setter Property="StrokeShape" Value="RoundRectangle 18" />
+            <Setter Property="Padding" Value="16" />
+        </Style>
+
+        <Style x:Key="CartaoTitulo" TargetType="Label">
+            <Setter Property="FontSize" Value="17" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="TextColor" Value="{StaticResource Texto}" />
+        </Style>
+
+        <Style x:Key="CartaoSub" TargetType="Label">
+            <Setter Property="FontSize" Value="13" />
+            <Setter Property="TextColor" Value="{StaticResource TextoSuave}" />
+        </Style>
+
+        <Style x:Key="TabLabel" TargetType="Label">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+            <Setter Property="TextColor" Value="{StaticResource Texto}" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
+        <VerticalStackLayout Spacing="0">
+
+            <!-- Cabeçalho + separadores -->
+            <VerticalStackLayout BackgroundColor="White" Spacing="0">
+
+                <HorizontalStackLayout Padding="16,16,16,8" Spacing="12">
+                    <Border BackgroundColor="{StaticResource Verde}"
+                            StrokeThickness="0"
+                            StrokeShape="RoundRectangle 10"
+                            WidthRequest="40" HeightRequest="40">
+                        <Label Text="👣" FontSize="20"
+                               HorizontalOptions="Center" VerticalOptions="Center" />
+                    </Border>
+                    <Label Text="Passo a passo"
+                           FontSize="20" FontAttributes="Bold"
+                           TextColor="{StaticResource Texto}"
+                           VerticalOptions="Center" />
+                </HorizontalStackLayout>
+
+                <Grid ColumnDefinitions="*,*,*,*" Padding="8,0" RowDefinitions="Auto,Auto">
+                    <VerticalStackLayout Grid.Column="0" Spacing="2">
+                        <Label Text="🏠" FontSize="20" HorizontalOptions="Center" />
+                        <Label Text="Início" Style="{StaticResource TabLabel}"
+                               FontAttributes="Bold" TextColor="{StaticResource Verde}" />
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Grid.Column="1" Spacing="2">
+                        <Label Text="▶️" FontSize="20" HorizontalOptions="Center" />
+                        <Label Text="Tutoriais" Style="{StaticResource TabLabel}" />
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Grid.Column="2" Spacing="2">
+                        <Label Text="🎧" FontSize="20" HorizontalOptions="Center" />
+                        <Label Text="Suporte" Style="{StaticResource TabLabel}" />
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Grid.Column="3" Spacing="2">
+                        <Label Text="⚙️" FontSize="20" HorizontalOptions="Center" />
+                        <Label Text="Definições" Style="{StaticResource TabLabel}" />
+                    </VerticalStackLayout>
+
+                    <BoxView Grid.Row="1" Grid.Column="0"
+                             Color="{StaticResource Verde}"
+                             HeightRequest="3" Margin="0,8,0,0" />
+                </Grid>
+            </VerticalStackLayout>
+
+            <!-- Conteúdo -->
+            <VerticalStackLayout Padding="16,20,16,24" Spacing="14">
+
+                <VerticalStackLayout Spacing="6" Margin="0,0,0,6">
+                    <Label Text="Olá! Vamos a isso?"
+                           FontSize="28" FontAttributes="Bold"
+                           TextColor="{StaticResource Texto}"
+                           SemanticProperties.HeadingLevel="Level1" />
+                    <Label Text="Escolha o que quer fazer no telemóvel."
+                           FontSize="16"
+                           TextColor="{StaticResource TextoSuave}" />
+                </VerticalStackLayout>
+
+                <!-- Grelha 2x2 -->
+                <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto"
+                      ColumnSpacing="12" RowSpacing="12">
+
+                    <Border Grid.Row="0" Grid.Column="0" Style="{StaticResource CartaoStyle}">
+                        <VerticalStackLayout Spacing="4">
+                            <Label Text="👤" FontSize="24" Margin="0,0,0,10" />
+                            <Label Text="Contactos" Style="{StaticResource CartaoTitulo}" />
+                            <Label Text="Ligar a alguém" Style="{StaticResource CartaoSub}" />
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border Grid.Row="0" Grid.Column="1" Style="{StaticResource CartaoStyle}">
+                        <VerticalStackLayout Spacing="4">
+                            <Label Text="📷" FontSize="24" Margin="0,0,0,10" />
+                            <Label Text="Câmara" Style="{StaticResource CartaoTitulo}" />
+                            <Label Text="Tirar uma fotografia" Style="{StaticResource CartaoSub}" />
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border Grid.Row="1" Grid.Column="0" Style="{StaticResource CartaoStyle}">
+                        <VerticalStackLayout Spacing="4">
+                            <Label Text="📅" FontSize="24" Margin="0,0,0,10" />
+                            <Label Text="Agenda" Style="{StaticResource CartaoTitulo}" />
+                            <Label Text="Ver compromissos" Style="{StaticResource CartaoSub}" />
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border Grid.Row="1" Grid.Column="1" Style="{StaticResource CartaoStyle}">
+                        <VerticalStackLayout Spacing="4">
+                            <Label Text="💬" FontSize="24" Margin="0,0,0,10" />
+                            <Label Text="Mensagens" Style="{StaticResource CartaoTitulo}" />
+                            <Label Text="Ler e enviar" Style="{StaticResource CartaoSub}" />
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
+
+                <!-- Internet -->
+                <Border Style="{StaticResource CartaoStyle}" Padding="16,14">
+                    <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="14">
+                        <Label Grid.Column="0" Text="🌐" FontSize="24" VerticalOptions="Center" />
+                        <VerticalStackLayout Grid.Column="1" Spacing="2" VerticalOptions="Center">
+                            <Label Text="Internet" Style="{StaticResource CartaoTitulo}" />
+                            <Label Text="Pesquisar na internet" Style="{StaticResource CartaoSub}" />
+                        </VerticalStackLayout>
+                        <Label Grid.Column="2" Text="›" FontSize="26"
+                               TextColor="{StaticResource TextoSuave}"
+                               VerticalOptions="Center" />
+                    </Grid>
+                </Border>
+
+                <!-- Aprender com calma -->
+                <Grid ColumnDefinitions="*,Auto" Margin="0,18,0,0">
+                    <Label Grid.Column="0" Text="Aprender com calma"
+                           FontSize="20" FontAttributes="Bold"
+                           TextColor="{StaticResource Texto}"
+                           SemanticProperties.HeadingLevel="Level2" />
+                    <Label Grid.Column="1" Text="Ver todos ›"
+                           FontSize="15" FontAttributes="Bold"
+                           TextColor="{StaticResource Verde}"
+                           VerticalOptions="Center" />
+                </Grid>
+
+                <!-- Cartão de vídeo -->
+                <Border Style="{StaticResource CartaoStyle}" Padding="0">
+                    <VerticalStackLayout Spacing="0">
+                        <Grid HeightRequest="150" BackgroundColor="#D9DED9">
+                            <!-- Quando tiver uma imagem, descomente a linha abaixo -->
+                            <!-- <Image Source="tutorial_fotografia.png" Aspect="AspectFill" /> -->
+
+                            <Border BackgroundColor="#F2FFFFFF"
+                                    StrokeThickness="0"
+                                    StrokeShape="RoundRectangle 28"
+                                    WidthRequest="56" HeightRequest="56"
+                                    HorizontalOptions="Center" VerticalOptions="Center">
+                                <Label Text="▶" FontSize="22"
+                                       TextColor="{StaticResource Texto}"
+                                       HorizontalOptions="Center" VerticalOptions="Center" />
+                            </Border>
+
+                            <Border BackgroundColor="#CC1B2B24"
+                                    StrokeThickness="0"
+                                    StrokeShape="RoundRectangle 8"
+                                    Padding="10,4"
+                                    HorizontalOptions="End" VerticalOptions="End"
+                                    Margin="0,0,12,12">
+                                <Label Text="2 min" TextColor="White"
+                                       FontSize="13" FontAttributes="Bold" />
+                            </Border>
+                        </Grid>
+
+                        <VerticalStackLayout Padding="14,14,14,16" Spacing="4">
+                            <Label Text="Como tirar uma fotografia"
+                                   FontSize="17" FontAttributes="Bold"
+                                   TextColor="{StaticResource Texto}" />
+                            <Label Text="Veja o vídeo, passo a passo."
+                                   FontSize="15"
+                                   TextColor="{StaticResource TextoSuave}" />
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Precisa de uma mão? -->
+                <Border BackgroundColor="{StaticResource VerdeClaro}"
+                        Stroke="{StaticResource Borda}"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 18"
+                        Padding="16"
+                        Margin="0,6,0,0">
+                    <VerticalStackLayout Spacing="14">
+                        <VerticalStackLayout Spacing="4">
+                            <HorizontalStackLayout Spacing="10">
+                                <Label Text="🎧" FontSize="20" VerticalOptions="Center" />
+                                <Label Text="Precisa de uma mão?"
+                                       FontSize="18" FontAttributes="Bold"
+                                       TextColor="{StaticResource Texto}"
+                                       VerticalOptions="Center" />
+                            </HorizontalStackLayout>
+                            <Label Text="Estamos aqui para ajudar."
+                                   FontSize="15"
+                                   TextColor="{StaticResource TextoSuave}"
+                                   Margin="30,0,0,0" />
+                        </VerticalStackLayout>
+
+                        <Button Text="Pedir ajuda  →"
+                                BackgroundColor="{StaticResource Verde}"
+                                TextColor="White"
+                                FontSize="17" FontAttributes="Bold"
+                                CornerRadius="12"
+                                HeightRequest="52"
+                                HorizontalOptions="Fill" />
+                    </VerticalStackLayout>
+                </Border>
+
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
