@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Idosos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+ed59364b1a5536e8f2f9fc39d3826eefd5d87903")]
 [assembly: System.Reflection.AssemblyProductAttribute("Idosos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Idosos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,1 +1,1 @@
-C:\Users\rodri\Desktop\Idosos\Idosos\Idosos.csproj;x64
+C:\Users\rodri\Desktop\Lapr_1\Idosos\Idosos\Idosos.csproj;x64

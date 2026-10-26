@@ -9,6 +9,75 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <Color x:Key="Primaria">#0F7C86</Color>
+            <Color x:Key="PrimariaClara">#E3F0F0</Color>
+            <Color x:Key="Fundo">#F4F8F8</Color>
+            <Color x:Key="Texto">#1B2B30</Color>
+            <Color x:Key="TextoSuave">#5B6B70</Color>
+            <Color x:Key="Borda">#DFE6E7</Color>
+
+            <Style x:Key="CartaoStyle" TargetType="Border">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="Stroke" Value="{StaticResource Borda}" />
+                <Setter Property="StrokeThickness" Value="1" />
+                <Setter Property="StrokeShape" Value="RoundRectangle 18" />
+                <Setter Property="Padding" Value="16" />
+            </Style>
+
+            <Style x:Key="CartaoTitulo" TargetType="Label">
+                <Setter Property="FontSize" Value="17" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="{StaticResource Texto}" />
+            </Style>
+
+            <Style x:Key="CartaoSub" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="{StaticResource TextoSuave}" />
+            </Style>
+
+            <Style x:Key="TabLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="TextColor" Value="{StaticResource Texto}" />
+            </Style>
+
+            <Style x:Key="TituloPagina" TargetType="Label">
+                <Setter Property="FontSize" Value="30" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="{StaticResource Texto}" />
+            </Style>
+
+            <Style x:Key="SubtituloPagina" TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="TextColor" Value="{StaticResource TextoSuave}" />
+            </Style>
+
+            <Style x:Key="SecaoTitulo" TargetType="Label">
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="{StaticResource Texto}" />
+            </Style>
+
+            <Style x:Key="BotaoPrimario" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Primaria}" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="17" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="HeightRequest" Value="52" />
+            </Style>
+
+            <Style x:Key="BotaoSecundario" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="TextColor" Value="{StaticResource Primaria}" />
+                <Setter Property="BorderColor" Value="{StaticResource Borda}" />
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="FontSize" Value="17" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="HeightRequest" Value="48" />
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

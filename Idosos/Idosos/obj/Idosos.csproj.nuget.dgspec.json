@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rodri\\Desktop\\Idosos\\Idosos\\Idosos.csproj": {}
+    "C:\\Users\\rodri\\Desktop\\Lapr_1\\Idosos\\Idosos\\Idosos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rodri\\Desktop\\Idosos\\Idosos\\Idosos.csproj": {
+    "C:\\Users\\rodri\\Desktop\\Lapr_1\\Idosos\\Idosos\\Idosos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rodri\\Desktop\\Idosos\\Idosos\\Idosos.csproj",
+        "projectUniqueName": "C:\\Users\\rodri\\Desktop\\Lapr_1\\Idosos\\Idosos\\Idosos.csproj",
         "projectName": "Idosos",
-        "projectPath": "C:\\Users\\rodri\\Desktop\\Idosos\\Idosos\\Idosos.csproj",
+        "projectPath": "C:\\Users\\rodri\\Desktop\\Lapr_1\\Idosos\\Idosos\\Idosos.csproj",
         "packagesPath": "C:\\Users\\rodri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rodri\\Desktop\\Idosos\\Idosos\\obj\\",
+        "outputPath": "C:\\Users\\rodri\\Desktop\\Lapr_1\\Idosos\\Idosos\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [

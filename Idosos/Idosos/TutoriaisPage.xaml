@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Idosos.Controls"
+             x:Class="Idosos.TutoriaisPage"
+             BackgroundColor="{StaticResource Fundo}">
+
+    <Grid RowDefinitions="Auto,*">
+
+        <controls:TopBar Grid.Row="0" Active="Tutoriais" />
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="16,20,16,24" Spacing="14">
+
+                <VerticalStackLayout Spacing="6">
+                    <Label Text="Tutoriais" Style="{StaticResource TituloPagina}"
+                           SemanticProperties.HeadingLevel="Level1" />
+                    <Label Text="Escolha um vídeo ou um guia." Style="{StaticResource SubtituloPagina}" />
+                </VerticalStackLayout>
+
+                <Label Text="Vídeos" Style="{StaticResource SecaoTitulo}" Margin="0,10,0,0"
+                       SemanticProperties.HeadingLevel="Level2" />
+
+                <!-- Vídeo grande -->
+                <Border Style="{StaticResource CartaoStyle}" Padding="0">
+                    <VerticalStackLayout Spacing="0">
+                        <Grid HeightRequest="150" BackgroundColor="#D9DED9">
+                            <Border BackgroundColor="#F2FFFFFF" StrokeThickness="0"
+                                    StrokeShape="RoundRectangle 28"
+                                    WidthRequest="56" HeightRequest="56"
+                                    HorizontalOptions="Center" VerticalOptions="Center">
+                                <Label Text="▶" FontSize="22" TextColor="{StaticResource Primaria}"
+                                       HorizontalOptions="Center" VerticalOptions="Center" />
+                            </Border>
+                            <Border BackgroundColor="#CC1B2B30" StrokeThickness="0"
+                                    StrokeShape="RoundRectangle 8" Padding="10,4"
+                                    HorizontalOptions="End" VerticalOptions="End"
+                                    Margin="0,0,12,12">
+                                <Label Text="2 min" TextColor="White" FontSize="13" FontAttributes="Bold" />
+                            </Border>
+                        </Grid>
+                        <VerticalStackLayout Padding="16,14,16,16" Spacing="4">
+                            <Label Text="Como tirar uma fotografia" Style="{StaticResource CartaoTitulo}" />
+                            <Label Text="Toque para ver o vídeo." Style="{StaticResource CartaoSub}" />
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Vídeo em linha -->
+                <Border Style="{StaticResource CartaoStyle}" Padding="16,14">
+                    <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="14">
+                        <Label Grid.Column="0" Text="👤" FontSize="24" VerticalOptions="Center" />
+                        <VerticalStackLayout Grid.Column="1" Spacing="2" VerticalOptions="Center">
+                            <Label Text="Ligar a alguém" Style="{StaticResource CartaoTitulo}" />
+                            <Label Text="Vídeo · 3 min" Style="{StaticResource CartaoSub}" />
+                        </VerticalStackLayout>
+                        <Border Grid.Column="2" BackgroundColor="{StaticResource PrimariaClara}"
+                                StrokeThickness="0" StrokeShape="RoundRectangle 22"
+                                WidthRequest="44" HeightRequest="44">
+                            <Label Text="▶" FontSize="16" TextColor="{StaticResource Primaria}"
+                                   HorizontalOptions="Center" VerticalOptions="Center" />
+                        </Border>
+                    </Grid>
+                </Border>
+
+                <Label Text="Guias passo a passo" Style="{StaticResource SecaoTitulo}" Margin="0,14,0,0"
+                       SemanticProperties.HeadingLevel="Level2" />
+
+                <Border Style="{StaticResource CartaoStyle}" Padding="16,14">
+                    <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="14">
+                        <Label Grid.Column="0" Text="💬" FontSize="24" VerticalOptions="Center" />
+                        <VerticalStackLayout Grid.Column="1" Spacing="2" VerticalOptions="Center">
+                            <Label Text="Enviar uma mensagem" Style="{StaticResource CartaoTitulo}" />
+                            <Label Text="Guia · 5 passos" Style="{StaticResource CartaoSub}" />
+                        </VerticalStackLayout>
+                        <Label Grid.Column="2" Text="›" FontSize="26"
+                               TextColor="{StaticResource Primaria}" VerticalOptions="Center" />
+                    </Grid>
+                </Border>
+
+                <Border Style="{StaticResource CartaoStyle}" Padding="16,14">
+                    <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="14">
+                        <Label Grid.Column="0" Text="🌐" FontSize="24" VerticalOptions="Center" />
+                        <VerticalStackLayout Grid.Column="1" Spacing="2" VerticalOptions="Center">
+                            <Label Text="Pesquisar na internet" Style="{StaticResource CartaoTitulo}" />
+                            <Label Text="Guia · 4 passos" Style="{StaticResource CartaoSub}" />
+                        </VerticalStackLayout>
+                        <Label Grid.Column="2" Text="›" FontSize="26"
+                               TextColor="{StaticResource Primaria}" VerticalOptions="Center" />
+                    </Grid>
+                </Border>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
